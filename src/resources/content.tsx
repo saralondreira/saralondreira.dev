@@ -2,48 +2,33 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Sara",
+  lastName: "Londreira",
+  name: `Sara Londreira`,
+  role: "Software Engineering Student",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "saralondreira@gmail.com",
+  location: "Europe/Lisbon",
+  languages: ["Portuguese", "English"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/teu-username",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/saralondreira",
     essential: true,
   },
   {
@@ -60,24 +45,24 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Transitioning to tech with a passion for software engineering</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Pedagogical Platform</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured work (In Development)
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/pedagogical-platform",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm Sara, a Software Engineering student based in Aveiro, Portugal. Leveraging my excellent communication and diagnostic skills from tech retail, I am currently building robust applications and transitioning into software development with a strong focus on Agile methodologies.
+    </>
   ),
 };
 
@@ -85,7 +70,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Aveiro, Portugal`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +79,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false, 
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +87,52 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Passionate about technology and currently transitioning my career path into software engineering. I bring excellent soft skills in communication, problem-solving, and teamwork from my extensive experience in technology retail. I am currently consolidating strong transversal programming foundations, heavily focused on Agile Development, and actively looking to integrate a challenging project where I can continuously learn.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Worten Portugal",
+        timeframe: "Sep 2024 - Sep 2025",
+        role: "IT Sales Consultant",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Provided specialized technical advice in the sale of IT equipment including Hardware, Peripherals, and Software.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Analyzed technical specifications to recommend the right solutions tailored to clients' specific needs.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "iStore - Apple Premium Reseller",
+        timeframe: "May 2023 - Apr 2024",
+        role: "Apple Specialist",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Delivered premium customer service focused on the client experience and maintaining high-quality standards.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Provided Tier 1 technical support for iOS/macOS, configured Apple ecosystems, and diagnosed technical needs.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "MO Fashion | Normal",
+        timeframe: "2021 - 2024",
+        role: "Sales Assistant",
+        achievements: [
+          <>
+            Managed visual merchandising and store organization to ensure an optimal shopping environment.
+          </>,
+          <>
+            Delivered customer service heavily focused on achieving and exceeding commercial goals.
           </>,
         ],
         images: [],
@@ -155,78 +140,81 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education & Certifications",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Instituto Superior de Engenharia do Porto (ISEP)",
+        description: <>CTESP in Agile Software Development (2025 - 2027). Practical focus on Software Engineering, intensive emphasis on Agile Methodologies (Scrum), software development lifecycle, and collaborative teamwork.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "IEFP | Centro Qualifica",
+        description: <>Specialization (CET Level 5) in Information Systems Technology and Programming (Nov 2025 - Nov 2026). Focus on Algorithms (C#, Python), Databases, Security, and Mobile Development (Android).</>,
+      },
+      {
+        name: "42 Porto",
+        description: <>Piscine Programming Bootcamp (Feb 2025 - Mar 2025). Intensive immersion in C and Shell. Developed autonomy, resilience, and peer-to-peer problem solving.</>,
+      },
+      {
+        name: "Escola Secundária Soares Basto",
+        description: <>Professional Course in Multimedia Technician (2015 - 2018). Final Grade: 16. Highlight: 18 out of 20 in Information Systems discipline.</>,
+      },
+      {
+        name: "Método Consultoria",
+        description: <>Certification in Customer Service and Teambuilding (Oct 2023).</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Hard Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Programming Languages",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Solid foundation in software development, logic, and object-oriented programming.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "C", icon: "code" },
+          { name: "C++", icon: "code" },
+          { name: "C#", icon: "code" },
+          { name: "Java", icon: "code" },
+          { name: "Python", icon: "code" },
+          { name: "JavaScript", icon: "javascript" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/projects/hospital-code.png",
+            alt: "Java Code Example",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Web, Mobile & Data",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Experience building user interfaces, mobile applications, and managing databases.</>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "HTML/CSS", icon: "code" },
+          { name: "Android", icon: "mobile" },
+          { name: "SQL", icon: "database" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Systems & Methodologies",
+        description: (
+          <>Proficient in version control, system administration, and modern development practices.</>
+        ),
+        tags: [
+          { name: "Git", icon: "git" },
+          { name: "Linux/Shell", icon: "terminal" },
+          { name: "Agile Development", icon: "cpu" },
+          { name: "Scrum", icon: "cpu" },
         ],
+        images: [],
       },
     ],
   },
@@ -235,19 +223,15 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about software engineering...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Software development projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
@@ -255,50 +239,7 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  images: [], 
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
