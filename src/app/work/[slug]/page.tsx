@@ -119,7 +119,33 @@ export default async function Project({
         </Row>
       </Row>
       {post.metadata.images.length > 0 && (
-        <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
+        <Row
+          gap="16"
+          fillWidth
+          style={{
+            overflowX: "auto",
+            scrollSnapType: "x mandatory",
+            scrollbarWidth: "none", 
+          }}
+        >
+          {post.metadata.images.map((imgSrc, index) => (
+            <Column
+              key={index}
+              style={{
+                flex: "0 0 100%", 
+                scrollSnapAlign: "center", 
+              }}
+            >
+              <Media 
+                priority={index === 0} 
+                aspectRatio="16 / 9" 
+                radius="m" 
+                alt={`Imagem do projeto ${index + 1}`} 
+                src={imgSrc} 
+              />
+            </Column>
+          ))}
+        </Row>
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />

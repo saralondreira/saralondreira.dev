@@ -2,21 +2,30 @@
 title: "TVDE Management App"
 publishedAt: "2024-10-20"
 images:
-  - "/images/projects/projects/tvde-code.png"
----
+  - "/images/projects/projects/tvde-app/tvde-code.png"
+  - "/images/projects/projects/tvde-app/newtvde.png"
+  - "/images/projects/projects/tvde-app/menu.png"
+  - "/images/projects/projects/tvde-app/save.png"
 
+---
 ## Overview
 
-An application built to help TVDE (Transporte Individual e Remunerado de Passageiros em Veículos Descaracterizados a Partir de Plataforma Eletrónica) drivers manage their daily trips, earnings, and vehicle maintenance schedules.
+A comprehensive Java-based management system developed for a TVDE (ride-hailing) company, built as an academic project for the Algorithms and Object-Oriented Programming course at ISEP. The application is designed to centralize and manage the core operations of a transportation business, handling the complex relationships between drivers, vehicles, clients, reservations, and trips.
 
-## Technologies Used
-
-- **Mobile Development:** Android
-- **Programming:** Java / C
-- **Database:** SQL (SQLite for local storage)
+<Button href="https://github.com/saralondreira/TVDE-Management-ISEP.git" target="_blank">
+  View Code on GitHub
+</Button>
 
 ## Key Features
 
-- Trip logging and daily earnings dashboard.
-- Expense tracking and vehicle maintenance reminders.
-- Intuitive user interface tailored for mobile use on the go.
+- **Entity Management:** Full CRUD (Create, Read, Update, Delete) operations for Drivers, Vehicles, Clients, Reservations, and Trips with strict dependency constraints (e.g., preventing the deletion of vehicles that have associated trips).
+- **Advanced Business Logic:** Functionality to seamlessly convert client reservations into active trips while strictly preventing schedule overlapping for vehicles and drivers.
+- **Statistical Reporting:** Features to extract valuable business metrics, such as a driver's total earnings within a specific timeframe, average trip distances, and the most requested destinations.
+- **Data Persistence:** Robust memory management using Arrays/ArrayLists, seamlessly integrated with File I/O operations to save and load application state, including support for managing multiple companies concurrently.
+
+## Technologies & Concepts Used
+
+- **Programming Language:** Java
+- **Core Concepts:** Object-Oriented Programming (OOP), Memory Management, Data Structures
+- **Data Storage:** In-memory Collections (ArrayLists) & File I/O Persistence
+- **Documentation:** Javadoc

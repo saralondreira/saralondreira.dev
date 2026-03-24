@@ -2,21 +2,30 @@
 title: "Hospital Management System"
 publishedAt: "2024-12-15"
 images:
-  - "/images/projects/projects/hospital-code.png"
+  - "/images/projects/projects/hospital-management/hospital-code.png"
+  - "/images/projects/projects/hospital-management/welcome.png"
+  - "/images/projects/projects/hospital-management/menu.png"
+  - "/images/projects/projects/hospital-management/config.png"
 ---
 
 ## Overview
 
-A robust application developed to manage hospital operations efficiently. This project focuses on handling patient records, structuring data, and applying solid Object-Oriented Programming principles.
+A console-based Java application designed to simulate and manage the complex daily operations of a hospital's emergency department. Developed as a final group project for the Project Laboratory 1 (LAPR1) course at ISEP, this system emphasizes deep understanding of Object-Oriented Programming (OOP) principles, algorithmic logic for triage, and low-level data structure management without relying on dynamic collections.
 
-## Technologies Used
-
-- **Programming:** Java
-- **Database:** SQL / Relational Databases
-- **Version Control:** Git
+<Button href="https://github.com/saralondreira/Javolt-Hospital-ISEP.git" target="_blank">
+  View Code on GitHub
+</Button>
 
 ## Key Features
 
-- Patient registration and medical history tracking.
-- Secure data management and retrieval.
-- System architecture designed for scalability and reliability.
+- **Dynamic Time Simulation:** Custom implementation of time units (24 per day) to progress hospital operations, managing doctor shifts, tracking patient waiting times, and automatically escalating urgency levels based on wait duration.
+- **Smart Triage & Automated Routing:** An intelligent algorithm that calculates a patient's urgency level and automatically assigns them to the correct medical specialty based on their dynamically inputted symptoms.
+- **Entity Management & Statistics:** Full management of doctors, patients, and specialties, alongside the generation of critical daily statistics (e.g., average patients per day, doctor daily earnings, and top specialties).
+- **Data Persistence:** Robust File I/O system to load initial state configurations and persistently save all operational history, inputs, and outputs safely to text files.
+
+## Technologies & Concepts Used
+
+- **Programming Language:** Java (Console Application)
+- **Core Concepts:** Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation, Abstraction), File I/O
+- **Data Structures:** Strict use of raw Arrays (dynamic lists like ArrayLists were strictly forbidden to challenge memory management skills).
+- **Version Control & Collaboration:** Git & GitHub (Agile collaboration using feature branches and Pull Requests).

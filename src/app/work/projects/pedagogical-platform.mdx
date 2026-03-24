@@ -2,21 +2,51 @@
 title: "Pedagogical Platform (In Development)"
 publishedAt: "2025-03-01"
 images:
-  - "/images/projects/projects/plataforma-code.png"
+  images:
+  - "/images/projects/pedagogical-platform/plataforma-code.png"
+  - "/images/projects/pedagogical-platform/login.png"
+  - "/images/projects/pedagogical-platform/dashboard.png"
+  - "/images/projects/pedagogical-platform/controlpanel.png"
+  - "/images/projects/pedagogical-platform/turma.png"
+  - "/images/projects/pedagogical-platform/profile.png"
+
 ---
 
 ## Overview
 
-A comprehensive pedagogical platform designed to facilitate learning, course management, and student-teacher interaction. This project is currently in active development as part of my academic and personal growth in software engineering.
+A centralized web-based Educational Management Platform being developed as my final project for the IEFP Software Engineering specialization. The system is designed to digitalize, optimize, and secure the administrative and pedagogical workflows of professional training institutions, specifically aligning with the modernization guidelines of European-funded programs (like PESSOAS 2030).
 
-## Technologies Used
+<Button href="https://github.com/saralondreira/Plataforma-Gestao-Pedagogica.git" target="_blank">
+  View Code on GitHub
+</Button>
 
-- **Programming:** C# / Python
-- **Database:** SQL
-- **Frontend:** HTML / CSS
+## The Challenge
 
-## Key Features
+Before this platform, the administrative processes suffered from critical inefficiencies:
+- **Hardware Dependency & Logistics:** Mandatory physical delivery of pedagogical documentation via CDs/DVDs, causing logistical bottlenecks and compatibility issues with modern hardware.
+- **Information Fragmentation:** Disorganized use of disparate digital tools (Drive, Teams, Email) created information silos, making it impossible to automatically track document submissions and compliance.
+- **Data Security & GDPR Risks:** High risk of data loss due to physical damage of media or lack of centralized backups, alongside severe GDPR compliance risks regarding trainee data circulation.
 
-- User management and authentication for students and educators.
-- Interactive course content delivery.
-- Progress tracking and assessment modules.
+## The Solution
+
+I architected a **Unified Pedagogical Platform** featuring hierarchical role-based access (Trainees, Trainers, and Coordinators/Mediators). The system centralizes communication, pedagogical documentation, and daily activity tracking into a single secure environment.
+
+### Key Features
+
+- **Secure File Management System:** A modern drag-and-drop file upload interface that replaces physical CDs. Uploaded files (grades, summaries, schedules) are automatically standardized (e.g., `CourseID_Module_Date.pdf`) and stored securely.
+- **Compliance & Tracking Dashboard:** An automated dashboard for coordinators that tracks delivery statuses. The algorithm actively checks deadlines against module completion dates and flags missing documentation in real-time.
+- **Attendance & Daily Activity Logging:** Dedicated modules for trainers to submit daily class summaries, log hours taught, and register student attendance, all subject to validation by mediators.
+- **Role-Based Routing:** Intelligent system architecture that directs users to customized interfaces (Student Dashboard vs. Management Dashboard) based on their assigned role and permissions.
+
+## Technical Architecture & Stack
+
+The project is built with a full-stack approach, following a structured software development lifecycle:
+
+- **Frontend:** HTML5, CSS3 (Grid/Flexbox), and JavaScript for a responsive, accessible user interface.
+- **Backend:** Node.js, handling secure file reception, renaming logic, and server-side operations.
+- **Database:** Relational Database (SQL) mapped with complex entity relationships (Users, Roles, Classes, File Deliveries, Summaries, and Attendance).
+- **Design & Prototyping:** UI/UX wireframing and prototyping (Figma/Pen & Paper) prior to development to ensure optimal user journeys.
+
+## Current Status
+
+This project is in active development. Current focus includes transitioning static front-end prototypes into dynamic views, implementing the interactive calendar for availability tracking, and finalizing the relational database schema to support the backend logic.
