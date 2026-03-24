@@ -35,8 +35,8 @@ With a solid background in technology retail, I've developed exceptional communi
 I'm always open to discussing new projects or tech opportunities!
 
 - **LinkedIn:** [linkedin.com/in/saralondreira](https://www.linkedin.com/in/saralondreira)
+- **Website:** [saralondreira.dev](https://www.saralondreira.dev)
 - **GitHub:** [github.com/saralondreira](https://github.com/saralondreira)
 - **Email:** [saralondreira@gmail.com](mailto:saralondreira@gmail.com)
-
 ---
 *Built with Next.js, TypeScript, and Once UI.*
