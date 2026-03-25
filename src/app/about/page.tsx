@@ -100,6 +100,11 @@ export default function About() {
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
             </Row>
+            <Row gap="8" vertical="center" marginBottom="8">
+              <Text onBackground="neutral-weak" variant="body-default-m">
+              Oliveira de Azeméis, Aveiro
+              </Text>
+            </Row>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((language, index) => (
